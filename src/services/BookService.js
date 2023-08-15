@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const http = axios.create({
-  baseURL: "127.0.0.1/book"
+  baseURL: process.env.VUE_APP_REMOTE_API + '/book'
 });
 
 export default {
