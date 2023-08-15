@@ -10,16 +10,11 @@
         <span></span>
 
         <ul id="menu">
-          <router-link v-bind:to="{ name: 'home' }" @click="closeMenu">Home</router-link
-          ><br />
-          <router-link v-bind:to="{ name: 'members' }" @click="closeMenu">Members</router-link
-          ><br />
+          <router-link v-bind:to="{ name: 'home' }" @click="closeMenu">Home</router-link><br />
+          <router-link v-bind:to="{ name: 'members' }" @click="closeMenu">Members</router-link><br />
           <router-link v-bind:to="{ name: 'login' }" v-if="!$store.state.token">Login</router-link>
-          <router-link
-            v-bind:to="{ name: 'logout' }"
-            v-if="$store.state.token != ''"
-            @click="closeMenu">Logout</router-link
-          ><br />
+          <router-link v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''"
+            @click="closeMenu">Logout</router-link><br />
           <router-link v-bind:to="{ name: 'aboutus' }" @click="closeMenu">About Us</router-link>
         </ul>
       </div>
@@ -47,6 +42,7 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
 body {
   margin: 0;
   padding: 0;
@@ -121,18 +117,18 @@ body {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span {
+#menuToggle input:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3) {
+#menuToggle input:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2) {
+#menuToggle input:checked~span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -157,7 +153,7 @@ body {
   font-size: 22px;
 }
 
-#menuToggle input:checked ~ ul {
+#menuToggle input:checked~ul {
   transform: none;
 }
 </style>
