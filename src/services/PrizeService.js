@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const http = axios.create({
-  baseURL: "http://localhost:9000/prize"
+  baseURL: process.env.VUE_APP_REMOTE_API + "/prize"
 });
 
 export default {
