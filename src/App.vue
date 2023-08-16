@@ -38,30 +38,13 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
-
-/* body {
-  margin: 0;
-  padding: 0;
-
-  background: #232323;
-  color: #cdcdcd;
-  font-family: "Montserrat", sans-serif;
-} */
-
-body {
-  font-family: var(--main-font);
-  font-size: var(--font-size);
-}
 
 #menuToggle {
   display: block;
   position: fixed;
   top: 50px;
   left: 50px;
-
   z-index: 1;
-
   -webkit-user-select: none;
   user-select: none;
 }
@@ -69,7 +52,7 @@ body {
 #menuToggle a {
   text-decoration: none;
   color: #232323;
-  font-size: 25px;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
@@ -106,6 +89,8 @@ body {
   z-index: 1;
 
   transform-origin: 4px 0px;
+  box-shadow: var(--panel-shadow);
+
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -141,6 +126,12 @@ body {
   padding: 50px;
   padding-top: 125px;
 
+  border:1px;
+  border-style: solid;
+  border-radius: 15%;
+  filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
+
+
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
 
@@ -148,12 +139,7 @@ body {
   transform: translate(-100%, 0);
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  background-color: aqua;
-}
-
-#menu li {
-  padding: 10px 0;
-  font-size: 22px;
+  background-color: rgba(255, 237, 200, 0.925);
 }
 
 #menuToggle input:checked~ul {
