@@ -3,11 +3,11 @@
     <div class="logo_header">
       <h3 id="member-heading">Your Family Members</h3>
       <router-link to="/">
-      <img src="../images/sharpened-transparent-logo.png" />
+      <img src="../assets/images/sharpened-transparent-logo.png" />
       </router-link>
     </div>
     <div class="loading" v-if="isLoading">
-      <img src="../assets/book_pages_opening.gif" />
+      <img src="../assets/images/book_pages_opening.gif" />
     </div>
     <table v-else class="members-table">
       <tr class="members-row" v-for="member in memberResults" v-bind:key="member.id">
@@ -29,7 +29,7 @@
       <the-leaderboard class="grid-item2" />
     </div>
     <div class="loading" v-if="isLoading">
-      <img src="../assets/book_pages_opening.gif" />
+      <img src="../assets/images/book_pages_opening.gif" />
     </div>
     <div id="nav">
       <button class="selections">

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="loading" v-if="isLoading">
-      <img src="../assets/book_pages_opening.gif" />
+      <img src="../assets/images/book_pages_opening.gif" />
     </div>
       <ul v-else>
           <h3 class="leaderboard-head">🌟 Leaderboard 🌟</h3>

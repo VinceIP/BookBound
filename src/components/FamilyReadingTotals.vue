@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="loading" v-if="isLoading">
-      <img src="../assets/book_pages_opening.gif" />
+      <img src="../assets/images/book_pages_opening.gif" />
     </div>
     <div v-else>
       <h4 class="total-books-read" id="books-read">Total Books Read:</h4>

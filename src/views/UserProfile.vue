@@ -8,7 +8,7 @@
         <router-link v-bind:to="{ name: 'home' }">
           <img
             class="logo-user"
-            src="../images/sharpened-transparent-logo.png"
+            src="../assets/images/sharpened-transparent-logo.png"
             alt="logo"
           />
         </router-link>
@@ -20,7 +20,7 @@
     </div>
     <div class="reading-list">
       <div class="loading" v-if="isLoading">
-        <img src="../assets/book_pages_opening.gif" />
+        <img src="../assets/images/book_pages_opening.gif" />
       </div>
 
       <div v-else class="reading-list-grid">

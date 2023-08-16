@@ -3,7 +3,7 @@
     <div class="headlogo">
       <h1 class="head">Create Account</h1>
       <router-link v-bind:to="{ name: 'home' }">
-        <img class="regheadLogo" src="../images/sharpened-transparent-logo.png" />
+        <img class="regheadLogo" src="../assets/images/sharpened-transparent-logo.png" />
       </router-link>
     </div>
     <form @submit.prevent="register">

@@ -1,5 +1,4 @@
 <template>
-  <!--    Made by Erik Terwan    -->
   <div id="app">
     <nav role="navigation">
       <div id="menuToggle">
@@ -21,9 +20,7 @@
     </nav>
     <router-view />
   </div>
-  <!-- Nav bar from VitorLuizC -->
 </template>
-
 <script>
 export default {
   methods: {
@@ -43,13 +40,18 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
-body {
+/* body {
   margin: 0;
   padding: 0;
 
   background: #232323;
   color: #cdcdcd;
   font-family: "Montserrat", sans-serif;
+} */
+
+body {
+  font-family: var(--main-font);
+  font-size: var(--font-size);
 }
 
 #menuToggle {
@@ -146,6 +148,7 @@ body {
   transform: translate(-100%, 0);
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  background-color: aqua;
 }
 
 #menu li {

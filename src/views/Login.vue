@@ -4,7 +4,7 @@
       Welcome! Please Log In!
       <div class="logo">
         <router-link v-bind:to="{name: 'home'}">
-          <img src="../images/sharpened-transparent-logo.png" />
+          <img src="../assets/images/sharpened-transparent-logo.png" />
         </router-link>
       </div>
     </h1>
@@ -116,7 +116,7 @@ form {
 }
 .all-input {
   display: flex;
-  background-image: url("../images/open_book_transparent-removebg-preview.png");
+  background-image: url("../assets/images/open_book_transparent-removebg-preview.png");
   background-repeat: no-repeat;
   flex-direction: column;
   flex-wrap: wrap;

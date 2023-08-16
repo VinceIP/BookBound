@@ -4,7 +4,7 @@
       <div class="logo_header">
         <h3 id="member-heading">Book Search</h3>
         <router-link to="/">
-        <img src="../images/sharpened-transparent-logo.png" />
+        <img src="../assets/images/sharpened-transparent-logo.png" />
         </router-link>
       </div>
       </header>

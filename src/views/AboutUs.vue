@@ -2,11 +2,11 @@
   <div class="about-us">
     <div class="head">
       <h1>About Us</h1>
-      <img class="title-logo" src="../images/sharpened-transparent-logo.png" />
+      <img class="title-logo" src="../assets/images/sharpened-transparent-logo.png" />
     </div>
     <div class="flexbox">
       <div>
-        <img src="../images/Ava.jpg" id="ava" alt="" />
+        <img src="../assets/images/Ava.jpg" id="ava" alt="" />
         <br />
         <p class="name">Ava Lindstrom</p>
         <a href="https://www.linkedin.com/in/ava-lindstrom/" id="ava-li"
@@ -20,7 +20,7 @@
       </div>
       <br />
       <div>
-        <img src="../images/Nova.jpg" id="nova" alt="" />
+        <img src="../assets/images/Nova.jpg" id="nova" alt="" />
         <br />
         <p class="name">Nova Widdifield</p>
         <a href="https://www.linkedin.com/in/nova-widdifield/" id="nova-li"
@@ -34,7 +34,7 @@
       </div>
       <br />
       <div>
-        <img src="../images/Vince.jpg" id="vince" alt="" />
+        <img src="../assets/images/Vince.jpg" id="vince" alt="" />
         <br />
         <p class="name">Vince Patterson</p>
         <a href="https://www.linkedin.com/in/vincent-patterson/" id="vince-li"
@@ -50,7 +50,7 @@
       </div>
       <br />
       <div>
-        <img src="../images/Blake.jpg" id="blake" alt="" />
+        <img src="../assets/images/Blake.jpg" id="blake" alt="" />
         <br />
         <p class="name">Blake Prather</p>
         <a href="https://www.linkedin.com/in/blake-c-prather/" id="blake-li"
