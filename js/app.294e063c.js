@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 530:
+/***/ 7441:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 
@@ -136,8 +136,8 @@ var es_array_some = __webpack_require__(5212);
 var es_object_to_string = __webpack_require__(1539);
 // EXTERNAL MODULE: ./node_modules/vue-router/dist/vue-router.esm.js
 var vue_router_esm = __webpack_require__(8345);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/views/Home.vue?vue&type=template&id=2ba4daf6&scoped=true&
-var Homevue_type_template_id_2ba4daf6_scoped_true_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/views/Home.vue?vue&type=template&id=c592cc94&scoped=true&
+var Homevue_type_template_id_c592cc94_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -186,7 +186,7 @@ var Homevue_type_template_id_2ba4daf6_scoped_true_render = function render() {
     }
   })])]), _vm._m(1)], 1);
 };
-var Homevue_type_template_id_2ba4daf6_scoped_true_staticRenderFns = [function () {
+var Homevue_type_template_id_c592cc94_scoped_true_staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -206,7 +206,7 @@ var Homevue_type_template_id_2ba4daf6_scoped_true_staticRenderFns = [function ()
     staticClass: "product_details"
   }, [_c('div', {
     staticClass: "info_box"
-  }, [_c('h1', [_vm._v(" Get ready for an incredible family reading program that's all about fun and togetherness! It's specially designed for both kids and parents, so the whole family can dive into the magic of reading. Imagine being whisked away to amazing worlds through captivating stories and vibrant illustrations. But that's not all - this program is packed with exciting surprises! You can challenge your family to friendly reading contests and win fantastic prizes. It's like a thrilling race to see who can read the most books or explore the most adventurous tales. And the best part? You'll be cheering each other on and celebrating as a team. It's a fantastic way to bond with your family and create lasting memories. So get ready to embark on this extraordinary reading adventure together, where stories come to life and joy fills the air! ")])]), _c('div', {
+  }, [_c('h1', [_vm._v(" Dive into a world of reading with your family through an incredible program designed for kids and parents alike. Explore captivating stories, take part in exciting reading contests, and win prizes. It's more than a reading challenge; it's a thrilling adventure that bonds families and creates lasting memories. Embark on this extraordinary journey where stories come to life, and shared joy awaits! ")])]), _c('div', {
     staticClass: "book_covers"
   }, [_c('img', {
     staticClass: "book_cover",
@@ -236,7 +236,7 @@ var Homevue_type_template_id_2ba4daf6_scoped_true_staticRenderFns = [function ()
     staticClass: "product_details"
   }, [_c('div', {
     staticClass: "info_box"
-  }, [_c('h1', [_vm._v(" Gone are the days of scattered reading logs and forgotten book lists. Our family reading tracking website offers a centralized hub where every family member can create their personal profiles, add books to their reading lists, and track their progress. This interactive and personalized experience makes reading a shared journey, fostering a sense of camaraderie and healthy competition among family members. ")])]), _c('div', {
+  }, [_c('h1', [_vm._v(" Say goodbye to disorganized reading records. Our family reading tracking website is a centralized hub where each family member can manage their profiles, curate reading lists, and track progress. This interactive platform turns reading into a shared adventure, fostering both camaraderie and friendly competition. Join the journey and transform reading into a family bonding experience! ")])]), _c('div', {
     staticClass: "book_covers"
   }, [_c('img', {
     staticClass: "book_cover",
@@ -266,7 +266,7 @@ var Homevue_type_template_id_2ba4daf6_scoped_true_staticRenderFns = [function ()
     staticClass: "product_details"
   }, [_c('div', {
     staticClass: "info_box"
-  }, [_c('h1', [_vm._v(" This family reading program that parents can also use brings numerous benefits for both children and parents alike. It promotes a positive reading environment at home, encouraging a love for books and fostering literacy skills in children. By engaging in shared reading activities, parents can actively participate and bond with their children over stories, creating cherished moments together. Additionally, the program provides access to a wide range of age-appropriate content, ensuring that children are exposed to suitable material. This empowers parents to feel confident that their kids are exploring books that align with their developmental stage. Moreover, the program offers an opportunity for families to spend quality time together, enjoying the wonders of storytelling and strengthening their connections. Overall, a family reading program that includes parents is a fantastic way to cultivate a love for reading, promote family togetherness, and spark lifelong learning in children. ")])]), _c('div', {
+  }, [_c('h1', [_vm._v(" Our family reading program, including parents, is more than just reading - it's a relationship builder. It fosters love for books and literacy in children while allowing parents to bond over stories. With access to age-appropriate content, parents can be confident their children are exploring suitable material. This program is not only a gateway to the wonders of storytelling but also a catalyst for quality family time and lifelong learning. Embrace reading as a family, and strengthen your connections through the joy of stories! ")])]), _c('div', {
     staticClass: "book_covers"
   }, [_c('img', {
     staticClass: "book_cover",
@@ -296,7 +296,7 @@ var Homevue_type_template_id_2ba4daf6_scoped_true_staticRenderFns = [function ()
     staticClass: "product_details"
   }, [_c('div', {
     staticClass: "info_box"
-  }, [_c('h1', [_vm._v(" If you're ready for epic tales, incredible friendships, and the thrill of reading, join us on this amazing journey. Let's explore the wonderful world of books together! ")])]), _c('div', {
+  }, [_c('h1', [_vm._v(" Join us for epic tales, incredible connections, and the thrill of reading. Embark on this adventure and explore the wonderful world of books with us! ")])]), _c('div', {
     staticClass: "book_covers"
   }, [_c('img', {
     staticClass: "book_cover",
@@ -325,7 +325,7 @@ var Homevue_type_template_id_2ba4daf6_scoped_true_staticRenderFns = [function ()
   })])])]);
 }];
 
-;// CONCATENATED MODULE: ./src/views/Home.vue?vue&type=template&id=2ba4daf6&scoped=true&
+;// CONCATENATED MODULE: ./src/views/Home.vue?vue&type=template&id=c592cc94&scoped=true&
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/views/Home.vue?vue&type=script&lang=js&
 /* harmony default export */ const Homevue_type_script_lang_js_ = ({
@@ -333,10 +333,10 @@ var Homevue_type_template_id_2ba4daf6_scoped_true_staticRenderFns = [function ()
 });
 ;// CONCATENATED MODULE: ./src/views/Home.vue?vue&type=script&lang=js&
  /* harmony default export */ const views_Homevue_type_script_lang_js_ = (Homevue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/views/Home.vue?vue&type=style&index=0&id=2ba4daf6&prod&scoped=true&lang=css&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/views/Home.vue?vue&type=style&index=0&id=c592cc94&prod&scoped=true&lang=css&
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/views/Home.vue?vue&type=style&index=0&id=2ba4daf6&prod&scoped=true&lang=css&
+;// CONCATENATED MODULE: ./src/views/Home.vue?vue&type=style&index=0&id=c592cc94&prod&scoped=true&lang=css&
 
 ;// CONCATENATED MODULE: ./src/views/Home.vue
 
@@ -349,11 +349,11 @@ var Homevue_type_template_id_2ba4daf6_scoped_true_staticRenderFns = [function ()
 
 var Home_component = (0,componentNormalizer/* default */.Z)(
   views_Homevue_type_script_lang_js_,
-  Homevue_type_template_id_2ba4daf6_scoped_true_render,
-  Homevue_type_template_id_2ba4daf6_scoped_true_staticRenderFns,
+  Homevue_type_template_id_c592cc94_scoped_true_render,
+  Homevue_type_template_id_c592cc94_scoped_true_staticRenderFns,
   false,
   null,
-  "2ba4daf6",
+  "c592cc94",
   null
   
 )
@@ -3727,9 +3727,9 @@ module.exports = __webpack_require__.p + "img/sharpened-transparent-logo.5864fba
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [998], () => (__webpack_require__(530)))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [998], () => (__webpack_require__(7441)))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=app.f6901256.js.map
+//# sourceMappingURL=app.294e063c.js.map
