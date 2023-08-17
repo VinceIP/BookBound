@@ -172,7 +172,7 @@ export default {
 
   .info_box {
     height: fit-content;
-    width: fit-content;
+    width: 100%;
     background: rgb(115, 147, 126);
     border: 2px;
     border-color: rgb(55, 77, 62);
