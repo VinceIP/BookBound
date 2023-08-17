@@ -1,6 +1,4 @@
 @import url(https://fonts.cdnfonts.com/css/socake);
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap);
-@import url(https://fonts.cdnfonts.com/css/socake);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap);
 @import url(https://fonts.cdnfonts.com/css/socake);
@@ -123,106 +121,97 @@
 }
 
 
+#info_box_header_container[data-v-00464e68] {
+  display: flex;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+#info_box_header[data-v-00464e68] {
+  width: 50%;
+  background: rgb(115, 147, 126);
+  border: 1px;
+  border-color: rgb(55, 77, 62);
+  border-style: solid;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: var(--panel-shadow);
+}
+#info_box_header h1[data-v-00464e68] {
+  font-family: var(--header-font);
+  font-size: 28px;
+  text-align: center;
+  color: var(--font-color);
+}
+
 /* -- Mobile phones -- */
 @media(max-width: 916px) {
-.home[data-v-c592cc94] {
+.home[data-v-00464e68] {
     padding: 0.5rem;
     background: var(--background-color);
 }
-.title[data-v-c592cc94] {
+.title[data-v-00464e68] {
     display: flex;
-    font-family: var(--header-font);
     background-color: var(--background-color-green-mute);
     color: var(--font-color);
     align-items: center;
-    margin: 30px 15px 30px 15px;
+    justify-items: center;
     border-radius: 50%;
-    height: 250px;
     box-shadow: var(--panel-shadow);
+    height: 15rem;
 }
-.title h1[data-v-c592cc94] {
-    font-size: 38px;
+.title h1[data-v-00464e68] {
+    font-family: var(--header-font);
+    font-size: 32px;
     text-shadow: 15px 15px 10px rgba(0, 0, 0, 0.329);
     text-align: right;
+    padding:1rem;
 }
-.title img[data-v-c592cc94] {
+.title img[data-v-00464e68] {
     width: 350px;
     filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
 }
-logo-slider[data-v-c592cc94] {
-    display: flex;
-    border: 2px solid rgb(0, 0, 0);
-    background: rgb(255, 237, 200);
-
-    box-shadow: var(--panel-shadow);
-    padding: 10px;
-    height: 325px;
-    overflow: hidden;
-    width: 70%;
-    position: relative;
-    margin: 0 auto 50px;
-}
-logo-slider:hover .slideshow[data-v-c592cc94] {
-    animation-play-state: paused;
-}
-.slideshow[data-v-c592cc94] {
-    display: flex;
-    animation: marquee-c592cc94 40s linear infinite;
-    justify-content: space-evenly;
-}
-#slides[data-v-c592cc94] {
-    width: 45rem;
-    height: auto;
-    padding: 0rem 1rem 0rem 1rem;
-}
-@keyframes marquee-c592cc94 {
-0% {
-      transform: translateX(0%)
-}
-100% {
-      transform: translateX(-50%)
-}
-}
-.content[data-v-c592cc94] {
+.content[data-v-00464e68] {
     margin-left: 1rem;
     margin-right: 1rem;
 }
-.product_details[data-v-c592cc94] {
+.product_details[data-v-00464e68] {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     row-gap: 2rem;
-    padding: 1rem;
     width: 100%;
     align-items: center;
+    justify-content: center;
 }
-.info_box[data-v-c592cc94] {
+.info_box[data-v-00464e68] {
     height: -moz-fit-content;
     height: fit-content;
-    width: 80%;
-    align-self: center;
-    justify-self: center;
+    width: -moz-fit-content;
+    width: fit-content;
     background: rgb(115, 147, 126);
     border: 2px;
     border-color: rgb(55, 77, 62);
     border-style: solid;
     border-radius: 80px;
-    padding: 25px;
     box-shadow: var(--panel-shadow);
 }
-.info_box h1[data-v-c592cc94] {
+.info_box h1[data-v-00464e68] {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
+    padding: 25px
 }
-.book_covers[data-v-c592cc94] {
+.book_covers[data-v-00464e68] {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2rem;
     width: 100%;
     justify-items: center;
     justify-content: center;
+    margin-bottom: 3rem;
 }
-.book_covers .book_cover[data-v-c592cc94] {
+.book_covers .book_cover[data-v-00464e68] {
     filter: drop-shadow(15px 15px 8px rgba(0, 0, 0, 0.329));
     width: 8rem;
     height: auto;
@@ -231,11 +220,15 @@ logo-slider:hover .slideshow[data-v-c592cc94] {
 
 /*-- Desktop --*/
 @media(min-width: 916px) {
-.home[data-v-c592cc94] {
+.content[data-v-00464e68] {
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+.home[data-v-00464e68] {
     padding: 0.5rem;
     background: var(--background-color);
 }
-.title[data-v-c592cc94] {
+.title[data-v-00464e68] {
     display: flex;
     font-family: var(--header-font);
     background-color: var(--background-color-green-mute);
@@ -246,17 +239,17 @@ logo-slider:hover .slideshow[data-v-c592cc94] {
     height: 250px;
     box-shadow: var(--panel-shadow);
 }
-.title h1[data-v-c592cc94] {
+.title h1[data-v-00464e68] {
     font-size: 58px;
     text-shadow: 15px 15px 10px rgba(0, 0, 0, 0.329);
     text-align: center;
     margin-left: 30%;
 }
-.title img[data-v-c592cc94] {
+.title img[data-v-00464e68] {
     width: 400px;
     filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
 }
-logo-slider[data-v-c592cc94] {
+logo-slider[data-v-00464e68] {
     display: flex;
     border: 2px solid rgb(0, 0, 0);
     background: rgb(255, 237, 200);
@@ -269,20 +262,20 @@ logo-slider[data-v-c592cc94] {
     position: relative;
     margin: 0 auto 50px;
 }
-logo-slider:hover .slideshow[data-v-c592cc94] {
+logo-slider:hover .slideshow[data-v-00464e68] {
     animation-play-state: paused;
 }
-.slideshow[data-v-c592cc94] {
+.slideshow[data-v-00464e68] {
     display: flex;
-    animation: marquee-c592cc94 40s linear infinite;
+    animation: marquee-00464e68 40s linear infinite;
     justify-content: space-evenly;
 }
-#slides[data-v-c592cc94] {
+#slides[data-v-00464e68] {
     width: 45rem;
     height: auto;
     padding: 0rem 1rem 0rem 1rem;
 }
-@keyframes marquee-c592cc94 {
+@keyframes marquee-00464e68 {
 0% {
       transform: translateX(0%)
 }
@@ -290,11 +283,7 @@ logo-slider:hover .slideshow[data-v-c592cc94] {
       transform: translateX(-50%)
 }
 }
-.content[data-v-c592cc94] {
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-.product_details[data-v-c592cc94] {
+.product_details[data-v-00464e68] {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -304,7 +293,7 @@ logo-slider:hover .slideshow[data-v-c592cc94] {
     width: 100%;
     align-items: center;
 }
-.info_box[data-v-c592cc94] {
+.info_box[data-v-00464e68] {
     height: -moz-fit-content;
     height: fit-content;
     width: 80%;
@@ -318,11 +307,11 @@ logo-slider:hover .slideshow[data-v-c592cc94] {
     padding: 25px;
     box-shadow: var(--panel-shadow);
 }
-.info_box h1[data-v-c592cc94] {
+.info_box h1[data-v-00464e68] {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
 }
-.book_covers[data-v-c592cc94] {
+.book_covers[data-v-00464e68] {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     grid-template-rows: auto;
@@ -331,21 +320,21 @@ logo-slider:hover .slideshow[data-v-c592cc94] {
     justify-items: center;
     align-items: center;
 }
-.book_covers .book_cover[data-v-c592cc94] {
+.book_covers .book_cover[data-v-00464e68] {
     filter: drop-shadow(15px 15px 8px rgba(0, 0, 0, 0.329));
     width: 10rem;
     height: auto;
 }
-.product_details:nth-child(odd) .info_box[data-v-c592cc94] {
+.product_details:nth-child(odd) .info_box[data-v-00464e68] {
     order: 1;
 }
-.product_details:nth-child(odd) .book_covers[data-v-c592cc94] {
+.product_details:nth-child(odd) .book_covers[data-v-00464e68] {
     order: 2;
 }
-.product_details:nth-child(even) .info_box[data-v-c592cc94] {
+.product_details:nth-child(even) .info_box[data-v-00464e68] {
     order: 2;
 }
-.product_details:nth-child(even) .book_covers[data-v-c592cc94] {
+.product_details:nth-child(even) .book_covers[data-v-00464e68] {
     order: 1;
 }
 }
