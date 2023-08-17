@@ -4,7 +4,7 @@
       <h1>BookBound: Discover the Power of Stories Together!</h1>
       <img class="floating" src="../assets/images/sharpened-transparent-logo.png" />
     </div>
-    <logo-slider>
+    <!-- <logo-slider>
       <div class="slideshow">
         <img id="slides" src="../assets/images/mock-annonceevent/picnic2.png" />
         <img id="slides" src="../assets/images/mock-annonceevent/meet-author.png" />
@@ -15,9 +15,15 @@
         <img id="slides" src="../assets/images/mock-annonceevent/bookReview.png" />
         <img id="slides" src="../assets/images/mock-annonceevent/bedtime2.png" />
       </div>
-    </logo-slider>
+    </logo-slider> -->
     <div class="content">
+      <div id="info_box_header_container">
+        <div id="info_box_header">
+          <h1>What is BookBound?</h1>
+        </div>
+      </div>
       <div class="product_details">
+
         <div class="info_box">
           <h1>
             Dive into a world of reading with your family through an incredible program designed for kids and parents
@@ -92,10 +98,31 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.cdnfonts.com/css/socake");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+#info_box_header_container {
+  display: flex;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  align-items: center;
+  justify-content: center;
+}
 
+#info_box_header {
+  width: 50%;
+  background: rgb(115, 147, 126);
+  border: 1px;
+  border-color: rgb(55, 77, 62);
+  border-style: solid;
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: var(--panel-shadow);
+}
 
+#info_box_header h1 {
+  font-family: var(--header-font);
+  font-size: 28px;
+  text-align: center;
+  color: var(--font-color);
+}
 
 /* -- Mobile phones -- */
 @media(max-width: 916px) {
@@ -106,69 +133,27 @@ export default {
 
   .title {
     display: flex;
-    font-family: var(--header-font);
     background-color: var(--background-color-green-mute);
     color: var(--font-color);
     align-items: center;
-    margin: 30px 15px 30px 15px;
+    justify-items: center;
     border-radius: 50%;
-    height: 250px;
     box-shadow: var(--panel-shadow);
+    height: 15rem;
   }
 
   .title h1 {
-    font-size: 38px;
+    font-family: var(--header-font);
+    font-size: 32px;
     text-shadow: 15px 15px 10px rgba(0, 0, 0, 0.329);
     text-align: right;
+    padding:1rem;
   }
 
   .title img {
     width: 350px;
     filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
   }
-
-  logo-slider {
-    display: flex;
-    border: 2px solid rgb(0, 0, 0);
-    background: rgb(255, 237, 200);
-
-    box-shadow: var(--panel-shadow);
-    padding: 10px;
-    height: 325px;
-    overflow: hidden;
-    width: 70%;
-    position: relative;
-    margin: 0 auto 50px;
-  }
-
-  logo-slider:hover .slideshow {
-    animation-play-state: paused;
-  }
-
-  .slideshow {
-    display: flex;
-    animation: marquee 40s linear infinite;
-    justify-content: space-evenly;
-  }
-
-  #slides {
-    width: 45rem;
-    height: auto;
-    padding: 0rem 1rem 0rem 1rem;
-
-  }
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%)
-    }
-
-    100% {
-      transform: translateX(-50%)
-    }
-  }
-
-
 
   .content {
     margin-left: 1rem;
@@ -180,22 +165,19 @@ export default {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     row-gap: 2rem;
-    padding: 1rem;
     width: 100%;
     align-items: center;
+    justify-content: center;
   }
 
   .info_box {
     height: fit-content;
-    width: 80%;
-    align-self: center;
-    justify-self: center;
+    width: fit-content;
     background: rgb(115, 147, 126);
     border: 2px;
     border-color: rgb(55, 77, 62);
     border-style: solid;
     border-radius: 80px;
-    padding: 25px;
     box-shadow: var(--panel-shadow);
 
   }
@@ -203,15 +185,17 @@ export default {
   .info_box h1 {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
+    padding: 25px
   }
 
   .book_covers {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2rem;
     width: 100%;
     justify-items: center;
     justify-content: center;
+    margin-bottom: 3rem;
   }
 
   .book_covers .book_cover {
@@ -224,6 +208,11 @@ export default {
 
 /*-- Desktop --*/
 @media(min-width: 916px) {
+  .content {
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
+
 
   .home {
     padding: 0.5rem;
@@ -297,10 +286,7 @@ export default {
 
 
 
-  .content {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+
 
   .product_details {
     display: grid;
