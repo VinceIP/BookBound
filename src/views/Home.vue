@@ -22,6 +22,7 @@
           <h1>What is BookBound?</h1>
         </div>
       </div>
+      <div class="product_details_container">
       <div class="product_details">
 
         <div class="info_box">
@@ -87,6 +88,7 @@
           <img class="book_cover" src="../assets/images/book covers/wutheringheights.jpg" alt="wuthering heights" />
         </div>
       </div>
+      </div>
     </div>
   </div>
 </template>
@@ -99,25 +101,25 @@ export default {
 
 <style scoped>
 .content {
-  margin-left: 15vw;
-  margin-right: 15vw;
+  margin-left: 12vw;
+  margin-right: 12vw;
 }
 
 .home {
   padding: 1vw;
-  background: var(--background-color);
 }
 
 .title {
   display: flex;
+  flex-direction: row;
   font-family: var(--header-font);
   background-color: var(--background-color-green-mute);
   color: var(--font-color);
   align-items: center;
   justify-content: center;
-  margin: 30px 15px 30px 15px;
-  border-radius: 30%;
-  height: 25vh;
+  margin: 75px 35px 30px 35px;
+  border-radius: 50%;
+  height: 20vh;
   box-shadow: var(--panel-shadow);
 }
 
@@ -142,6 +144,7 @@ export default {
 
 #info_box_header {
   width: 30%;
+  height: fit-content;
   background: rgb(115, 147, 126);
   border: 1px;
   border-color: rgb(55, 77, 62);
@@ -158,28 +161,39 @@ export default {
   color: var(--font-color);
 }
 
+.product_details_container{
+  display:grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+
 .product_details {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  column-gap: 2vw;
   padding: 1rem;
-  margin-top:1.5cm;
-  margin-bottom: 1.5cm;
-  width: 100%;
+  margin-left:8vw;
+  margin-right: auto;
+  width: 70%;
   align-items: center;
   justify-items: center;
+  background-color: var(--background-color-popout);
+  padding:50px;
+  box-shadow: var(--panel-shadow);
+
 }
 
 .info_box {
   height: fit-content;
-  width: 100%;
+  width:fit-content;
   background: rgb(115, 147, 126);
   border: 2px;
   border-color: rgb(55, 77, 62);
   border-style: solid;
   border-radius: 80px;
-  padding: 25px;
+  padding: 20px 30px 20px 30px;
+  margin-left:20px;
+  margin-right:20px;
   box-shadow: var(--panel-shadow);
 }
 
@@ -190,10 +204,10 @@ export default {
 
 .book_covers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  gap: 5rem;
-  width: 90%;
+  gap: 1vw;
+  width: 100%;
 }
 
 .book_covers .book_cover {
@@ -259,62 +273,122 @@ export default {
 
 /* -- Mobile small -- */
 @media(max-width: 713px) {
-  .home {
-    padding: 0rem;
-  }
-
   .content {
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
+  margin-left: 0vw;
+  margin-right: 0vw;
+}
 
-  .title {
-    height: 15rem;
-  }
+.home {
+  padding: 0vw;
+}
 
-  .title h1 {
-    font-size: 30px;
-    text-align: left;
-    padding: 0rem;
-  }
+.title {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--header-font);
+  background-color: var(--background-color-green-mute);
+  color: var(--font-color);
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  border-radius: 20%;
+  height: 45vh;
+  box-shadow: var(--panel-shadow);
+}
 
-  .title img {
-    width: 250px;
-  }
+.title h1 {
+  font-size:42px;
+  text-shadow: 15px 15px 10px rgba(0, 0, 0, 0.329);
+  text-align: center;
+}
 
-  .product_details {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    column-gap: 0rem;
-    padding: 0rem;
-    margin-bottom: 0rem;
-    width: 85vw;
-    justify-content: center;
-    align-items: center;
-  }
+.title img {
+  z-index: 3;
+   transform: scale(0.5) translate(-15px -65px);
 
-  .info_box {
-    height: fit-content;
-    width: inherit;
-    padding: 1.25rem;
-  }
+  filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
+}
 
-  .info_box h1 {
-    font-size: 16px;
-  }
+#info_box_header_container {
+  display: flex;
+  margin: 45px;
+  align-items: center;
+  justify-content: center;
+}
 
-  .book_covers {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    width: 100%;
-    
-  }
+#info_box_header {
+  width: 80vw;
+  height: fit-content;
+  background: rgb(115, 147, 126);
+  border: 1px;
+  border-color: rgb(55, 77, 62);
+  border-style: solid;
+  border-radius: 40px;
+  padding: 0vh;
+  box-shadow: var(--panel-shadow);
+}
 
-  .book_covers .book_cover {
-    width: 5rem;
-    height: auto;
-  }
+#info_box_header h1 {
+  font-family: var(--header-font);
+  font-size: 4vh;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.product_details_container{
+  display:grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+
+.product_details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  padding: 1rem;
+  margin-left:8vw;
+  margin-right: auto;
+  width: 70%;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--background-color-popout);
+  padding:50px;
+  box-shadow: var(--panel-shadow);
+
+}
+
+.info_box {
+  height: fit-content;
+  width:fit-content;
+  background: rgb(115, 147, 126);
+  border: 2px;
+  border-color: rgb(55, 77, 62);
+  border-style: solid;
+  border-radius: 80px;
+  padding: 20px 30px 20px 30px;
+  margin-left:20px;
+  margin-right:20px;
+  box-shadow: var(--panel-shadow);
+}
+
+.info_box h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.book_covers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 1vw;
+  width: 100%;
+}
+
+.book_covers .book_cover {
+  filter: drop-shadow(15px 15px 8px rgba(0, 0, 0, 0.329));
+  width: 8rem;
+  height: auto;
+}
 
 }
 
@@ -328,6 +402,7 @@ export default {
 
   .product_details:nth-child(odd) .book_covers {
     order: 2;
+    
   }
 
   .product_details:nth-child(even) .info_box {
