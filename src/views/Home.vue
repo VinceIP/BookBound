@@ -207,12 +207,6 @@ export default {
   width: 90%;
 }
 
-.rounded_panel h1 {
-  font-family: var(--main-font);
-  font-size: 16px;
-  padding: 10px;
-}
-
 .book_covers {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -229,44 +223,6 @@ export default {
 
 /*-- Mobile -- */
 @media (max-width: 500px) {
-  .page_header {
-  }
-  .page_header h1 {
-    padding: 3px;
-  }
-  .page_header img {
-    position: absolute;
-    top: 90px;
-    left: 20px;
-    width: 325px;
-    height: auto;
-    filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
-  }
-
-  .floating {
-    margin-left: 0px;
-    margin-top: 0px;
-  }
-
-  @keyframes floating {
-    0% {
-      transform: translate(0%, 30px);
-    }
-    50% {
-      transform: translate(0%, 45px);
-    }
-    100% {
-      transform: translate(0%, 30px);
-    }
-  }
-  .content {
-    position: relative;
-    margin-left: 1vw;
-    margin-right: auto;
-    top: 290px;
-    width: 90vw;
-  }
-
   #header_panel {
     width: 70vw;
   }
@@ -311,19 +267,7 @@ export default {
 }
 
 /* -- Mobile Large/landscape -- */
-@media (max-width: 1000px) {
-
-  .page_header h1 {
-    padding: 3px;
-    font-size: 42px;
-  }
-  .page_header img {
-    width: 325px;
-  }
-  .rounded_panel h1 {
-    font-size: 14px;
-    padding: 8px;
-  }
+@media (min-width: 501px) and (max-width: 1000px) {
   .book_covers {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
