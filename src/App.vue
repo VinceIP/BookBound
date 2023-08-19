@@ -44,7 +44,7 @@ export default {
   position: fixed;
   top: 50px;
   left: 50px;
-  z-index: 1;
+  z-index: 5;
   -webkit-user-select: none;
   user-select: none;
 }
