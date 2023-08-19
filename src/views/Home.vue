@@ -173,7 +173,6 @@ export default {
 </script>
 
 <style scoped>
-
 #header_panel {
   width: 35%;
 }
@@ -189,11 +188,11 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 30px;
-  width:85%;
+  width: 85%;
 }
 
 .product_details {
-  width:100%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -238,7 +237,7 @@ export default {
   .page_header img {
     position: absolute;
     top: 90px;
-    left: -40px;
+    left: 20px;
     width: 325px;
     height: auto;
     filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
@@ -287,12 +286,12 @@ export default {
     padding: 15px;
   }
 
-  .product_details .rounded_panel{
+  .product_details .rounded_panel {
     height: fit-content;
     padding: 9px;
     margin: 5px 0px 15px 0px;
-    width:100%;
-}
+    width: 100%;
+  }
 
   .rounded_panel h1 {
     font-size: 12px;
@@ -311,14 +310,47 @@ export default {
   }
 }
 
-/* -- Mobile Large -- */
-@media (max-width:1000px){
+/* -- Mobile Large/landscape -- */
+@media (max-width: 1000px) {
+
+  .page_header h1 {
+    padding: 3px;
+    font-size: 42px;
+  }
+  .page_header img {
+    width: 325px;
+  }
+  .rounded_panel h1 {
+    font-size: 14px;
+    padding: 8px;
+  }
   .book_covers {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 1vw;
-  width: 100%;
-}
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1vw;
+    max-width: 70%;
+  }
+  .book_covers .book_cover {
+    filter: drop-shadow(15px 15px 8px rgba(0, 0, 0, 0.329));
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product_details:nth-child(odd) .rounded_panel {
+    order: 1;
+  }
+
+  .product_details:nth-child(odd) .book_covers {
+    order: 2;
+  }
+
+  .product_details:nth-child(even) .rounded_panel {
+    order: 2;
+  }
+
+  .product_details:nth-child(even) .book_covers {
+    order: 1;
+  }
 }
 
 /*-- Desktop --*/
