@@ -44,7 +44,7 @@ export default {
   position: fixed;
   top: 50px;
   left: 50px;
-  z-index: 5;
+  z-index: 6;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -71,7 +71,7 @@ export default {
   cursor: pointer;
 
   opacity: 0;
-  z-index: 2;
+  z-index: 5;
 
   -webkit-touch-callout: none;
 }
@@ -86,7 +86,7 @@ export default {
   background: rgb(88, 85, 91);
   border-radius: 3px;
 
-  z-index: 1;
+  z-index: 5;
 
   transform-origin: 4px 0px;
   box-shadow: var(--panel-shadow);
