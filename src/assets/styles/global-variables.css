@@ -24,6 +24,11 @@
 body {
 }
 
+button{
+  font-family: var(--main-font);
+  font-weight: bold;
+}
+
 .content {
   margin-left: 1%;
   margin-right: 1%;

@@ -7,18 +7,7 @@
         src="../assets/images/sharpened-transparent-logo.png"
       />
     </div>
-    <!-- <logo-slider>
-      <div class="slideshow">
-        <img id="slides" src="../assets/images/mock-annonceevent/picnic2.png" />
-        <img id="slides" src="../assets/images/mock-annonceevent/meet-author.png" />
-        <img id="slides" src="../assets/images/mock-annonceevent/bookReview.png" />
-        <img id="slides" src="../assets/images/mock-annonceevent/bedtime2.png" />
-        <img id="slides" src="../assets/images/mock-annonceevent/picnic2.png" />
-        <img id="slides" src="../assets/images/mock-annonceevent/meet-author.png" />
-        <img id="slides" src="../assets/images/mock-annonceevent/bookReview.png" />
-        <img id="slides" src="../assets/images/mock-annonceevent/bedtime2.png" />
-      </div>
-    </logo-slider> -->
+
     <div class="content">
       <div class="rounded_panel" id="header_panel">
         <h1>What is BookBound?</h1>

@@ -1,51 +1,85 @@
 <template>
-  <div id="register" class="text-center">
-    <div class="headlogo">
-      <h1 class="head">Create Account</h1>
-      <router-link v-bind:to="{ name: 'home' }">
-        <img class="regheadLogo" src="../assets/images/sharpened-transparent-logo.png" />
-      </router-link>
+  <div class="register">
+    <div class="page_header">
+      <h1>Create Account</h1>
+      <img
+        class="floating"
+        src="../assets/images/sharpened-transparent-logo.png"
+      />
     </div>
-    <form @submit.prevent="register">
-      <div class="behind">
+    <div class="content">
+      <div class="registration-panel">
         <div role="alert" v-if="registrationErrors">
           {{ registrationErrorMsg }}
         </div>
-        <div class="form-input-group">
-          <label for="firstName">First Name: </label>
-          <input type="text" id="firstName" v-model="user.firstName" required autofocus />
-        </div>
-        <div class="form-input-group">
-          <label for="lastName">Last Name: </label>
-          <input type="text" id="lastName" v-model="user.lastName" required autofocus />
-        </div>
-        <div class="form-input-group">
-          <label for="email">Email: </label>
-          <input type="email" id="email" v-model="user.email" required autofocus />
-        </div>
-        <div class="form-input-group">
-          <label for="username">Username: </label>
-          <input type="text" id="username" v-model="user.username" required autofocus />
-        </div>
-        <div class="form-input-group">
-          <label for="password">Password: </label>
-          <input type="password" id="password" v-model="user.password" required />
-        </div>
-        <div class="form-input-group">
-          <label for="confirmPassword">Confirm Password: </label>
-          <input type="password" id="confirmPassword" v-model="user.confirmPassword" required />
-        </div>
-        <button class="submit" type="submit">Create Account</button>
-        <p>
-          <router-link class="toLogin" :to="{ name: 'login' }">Already have an account? Log in.</router-link>
-        </p>
+
+        <form @submit.prevent="register">
+          <div>
+            <label for="firstName">First Name: </label>
+            <input
+              type="text"
+              id="firstName"
+              v-model="user.firstName"
+              required
+              autofocus
+            />
+          </div>
+
+          <div>
+            <label for="lastName">Last Name: </label>
+            <input
+              type="text"
+              id="lastName"
+              v-model="user.lastName"
+              required
+              autofocus
+            />
+          </div>
+          <div>
+            <label for="email">Email: </label>
+            <input
+              type="email"
+              id="email"
+              v-model="user.email"
+              required
+              autofocus
+            />
+          </div>
+          <div>
+            <label for="username">Username: </label>
+            <input
+              type="text"
+              id="username"
+              v-model="user.username"
+              required
+              autofocus
+            />
+          </div>
+          <div>
+            <label for="password">Password: </label>
+            <input
+              type="password"
+              id="password"
+              v-model="user.password"
+              required
+            />
+          </div>
+          <div>
+            <label for="confirmPassword">Confirm Password: </label>
+            <input
+              type="password"
+              id="confirmPassword"
+              v-model="user.confirmPassword"
+              required
+            />
+          </div>
+          <button class="submit" type="submit">Create Account</button>
+          <router-link class="toLogin" :to="{ name: 'login' }"
+            >Already have an account? Log in.</router-link
+          >
+        </form>
       </div>
-    </form>
-    <p class="running">
-      📕 📙 📒 📗 📘 📓 📕 📙 📒 📗 📘 📓 📕 📙 📒 📗 📘 📓 📕 📙 📒 📗 📘 📓 📕
-      📒 📗 📘 📓 📕 📙 📒 📗 📘 📓 📕 📙 📒 📗 📘 📓 📕 📙 📒 📗 📘 📓📕 📙
-      📒 📗 📘 📓 📕 📙 📒 📗 📘 📓 📕 📙 📒 📗 📘 📓 📕 📙 📒 📗 📘 📓 📕
-    </p>
+    </div>
   </div>
 </template>
 
@@ -66,14 +100,15 @@ export default {
         role: "user",
       },
       registrationErrors: false,
-      registrationErrorMsg: "There were problems registering this user.",
+      registrationErrorMsg: "",
     };
   },
   methods: {
     register() {
+      this.clearErrors();
       if (this.user.password != this.user.confirmPassword) {
         this.registrationErrors = true;
-        this.registrationErrorMsg = "Password & Confirm Password do not match.";
+        this.registrationErrorMsg = "Passwords must match.";
       } else {
         authService
           .register(this.user)
@@ -89,7 +124,10 @@ export default {
             const response = error.response;
             this.registrationErrors = true;
             if (response.status === 400) {
-              this.registrationErrorMsg = "Bad Request: Validation Errors";
+              this.registrationErrorMsg = "Bad Request: Validation Error";
+            } else {
+              this.registrationErrorMsg =
+                "An error ocurred during registration.";
             }
           });
       }
@@ -103,97 +141,79 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
-@import url("https://fonts.cdnfonts.com/css/socake");
-
-.behind {
-  background: rgba(232, 123, 31, 0.8);
+.content {
   display: flex;
   flex-direction: column;
-  padding-top: 25px;
-  align-items: flex-start;
-  width: 1100px;
-  height: 550px;
-  justify-content: space-between;
-  border-radius: 8px;
-  border: solid 3px rgb(182, 90, 10);
-  margin-top: 30px;
-}
-
-.headlogo {
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  background: rgba(254, 209, 113, 0.5);
-  border-left: 60px solid rgb(115, 147, 126);
-  border-right: 60px solid rgb(115, 147, 126);
-  border-top: 5px solid rgb(115, 147, 126);
-  height: 250px;
-  border-radius: 3px;
+  width: 100%;
 }
-
-.head {
-  font-family: "Socake", sans-serif;
-  font-size: 60px;
-  color: rgb(88, 85, 99);
+.registration-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(197, 124, 65, 0.356);
+  box-shadow: var(--panel-shadow);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 15px;
+  width: 50%;
 }
 
 form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-content: center;
-  align-items: baseline;
-  background: rgb(115, 147, 126);
+  align-items: flex-end;
 }
 
-.form-input-group {
-
-  display: flex;
-  border: solid, 1px, black;
-  margin-bottom: 1rem;
-  color: rgb(59, 57, 66);
-  font-weight: bold;
-  font-size: 20px;
+form button {
+  align-self: center;
+  margin: 15px;
 }
 
 label {
-  margin-right: 0.5rem;
+  margin: 1px;
+  font-size: 21px;
 }
-
-img {
-  width: 300px;
-  height: 350px;
+input {
+  margin: 5px;
+  font-size: 16px;
 }
 
 .toLogin {
   text-decoration: underline;
   color: black;
   font-family: "Montserrat", sans-serif;
-}
-
-.running {
-  display: flex;
-  background: rgb(115, 147, 126);
-  height: 95px;
-  margin-top: 0;
-  padding-top: 20px;
+  align-self: center;
 }
 
 .submit {
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
   padding: 12px 28px;
-  margin-left: 30px;
   border: 2.5px solid rgb(182, 90, 10);
   background-color: rgba(255, 200, 154, 0.8);
-  font-family: "Montserrat", sans-serif;
-  color: rgb(48, 46, 49);
-  font-weight: bold;
   font-size: 15px;
 }
 
 .submit:hover {
   background-color: rgb(182, 90, 10);
+}
+
+/*-- Mobile --*/
+@media (max-width: 500px) {
+  .registration-panel {
+    margin-bottom: 25px;
+    padding: 10px;
+    width: 95%;
+  }
+
+  form button {
+    align-self: center;
+    margin: 15px;
+  }
+
+  label {
+    font-size: 17px;
+  }
 }
 </style>
