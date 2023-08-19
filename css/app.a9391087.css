@@ -20,26 +20,26 @@
 @import url(https://fonts.cdnfonts.com/css/socake);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
-#menuToggle[data-v-d13ef99a] {
+#menuToggle[data-v-69de92a2] {
   display: block;
   position: fixed;
   top: 50px;
   left: 50px;
-  z-index: 1;
+  z-index: 5;
   -webkit-user-select: none;
   -moz-user-select: none;
        user-select: none;
 }
-#menuToggle a[data-v-d13ef99a] {
+#menuToggle a[data-v-69de92a2] {
   text-decoration: none;
   color: #232323;
   font-size: 20px;
   transition: color 0.3s ease;
 }
-#menuToggle a[data-v-d13ef99a]:hover {
+#menuToggle a[data-v-69de92a2]:hover {
   color: tomato;
 }
-#menuToggle input[data-v-d13ef99a] {
+#menuToggle input[data-v-69de92a2] {
   display: block;
   width: 40px;
   height: 32px;
@@ -54,7 +54,7 @@
 
   -webkit-touch-callout: none;
 }
-#menuToggle span[data-v-d13ef99a] {
+#menuToggle span[data-v-69de92a2] {
   display: block;
   width: 33px;
   height: 4px;
@@ -73,25 +73,25 @@
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
-#menuToggle span[data-v-d13ef99a]:first-child {
+#menuToggle span[data-v-69de92a2]:first-child {
   transform-origin: 0% 0%;
 }
-#menuToggle span[data-v-d13ef99a]:nth-last-child(2) {
+#menuToggle span[data-v-69de92a2]:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
-#menuToggle input:checked~span[data-v-d13ef99a] {
+#menuToggle input:checked~span[data-v-69de92a2] {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
-#menuToggle input:checked~span[data-v-d13ef99a]:nth-last-child(3) {
+#menuToggle input:checked~span[data-v-69de92a2]:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-#menuToggle input:checked~span[data-v-d13ef99a]:nth-last-child(2) {
+#menuToggle input:checked~span[data-v-69de92a2]:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
-#menu[data-v-d13ef99a] {
+#menu[data-v-69de92a2] {
   position: absolute;
   width: 100px;
   margin: -100px 0 0 -50px;
@@ -113,7 +113,7 @@
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   background-color: rgba(255, 237, 200, 0.925);
 }
-#menuToggle input:checked~ul[data-v-d13ef99a] {
+#menuToggle input:checked~ul[data-v-69de92a2] {
   transform: none;
 }
 
