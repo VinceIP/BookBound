@@ -148,8 +148,10 @@ img {
 
 .location_panel{
   height:50px;
-  padding:0;
+  padding:0px;
 }
+
+
 
 /* -- Mobile Large/landscape -- */
 @media (min-width: 501px) and (max-width: 1000px) {

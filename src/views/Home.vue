@@ -184,6 +184,7 @@ export default {
   color: var(--font-color);
 }
 
+
 .product_details_container {
   display: grid;
   grid-template-columns: 1fr;
