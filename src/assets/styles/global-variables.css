@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 @import url("https://fonts.cdnfonts.com/css/socake");
 
-
-
 :root {
     --background-color: rgba(254, 232,184);
     --background-image: url("../images/bg.jpg");
     --background-color-popout: rgba(254, 209, 113, 0.192);
     --background-color-green: rgb(157,172,143);
-    --background-color-green-mute: rgba(115, 147, 126, 0.7);
+    --background-color-green-mute: rgba(115, 147, 126, 0.753);
 
     --main-font: "Montserrat", sans-serif;
     --header-font: "Socake", sans-serif;
@@ -27,6 +25,42 @@ body{
 
 }
 
+.content {
+    margin-left: 12vw;
+    margin-right: 12vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.page_header{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--header-font);
+    background-color: var(--background-color-green-mute);
+    color: var(--font-color);
+    align-items: center;
+    justify-content: center;
+    margin-left: 55px;
+    margin-right: 55px;
+    height: 250px;
+    box-shadow: var(--panel-shadow);
+}
+
+.page_header h1{
+    font-size:56px;
+    text-shadow: 15px 15px 10px rgba(0, 0, 0, 0.329);
+    text-align: center;
+}
+
+.page_header img {
+    z-index: 1;
+    width: 475px;
+    height: auto;
+    filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
+  }
+
 .floating { 
     animation-name: floating;
     animation-duration: 3.5s;
@@ -38,7 +72,52 @@ body{
 }
  
 @keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0px, 15px); }
-    100%   { transform: translate(0, -0px); }   
+    0% { transform: translate(15%,  30px); }
+    50%  { transform: translate(15%, 45px); }
+    100%   { transform: translate(15%, 30px); }   
+}
+
+.rounded_panel{
+    height: fit-content;
+    background: rgb(115, 147, 126);
+    border: 1px;
+    border-color: rgb(55, 77, 62);
+    border-style: solid;
+    border-radius: 40px;
+    padding: 1vh;
+    margin:50px;
+    width:fit-content;
+    box-shadow: var(--panel-shadow);
+    justify-content: center;
+    align-items: center;
+}
+
+/*-- Desktop -- */
+@media(min-width: 916px){
+
+}
+
+/*-- Mobile --*/
+@media(max-width: 500px){
+    
+    .content{
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+
+    .page_header{
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        height: auto;
+    }
+    
+    .page_header h1{
+        font-size:36px;
+    }
+
+
 }
