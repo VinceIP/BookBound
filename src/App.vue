@@ -10,7 +10,7 @@
 
         <ul id="menu">
           <router-link v-bind:to="{ name: 'home' }" @click="closeMenu">Home</router-link><br />
-          <router-link v-bind:to="{ name: 'members' }" @click="closeMenu">Members</router-link><br />
+          <router-link v-bind:to="{ name: 'members' }" @click="closeMenu">Dashboard</router-link><br />
           <router-link v-bind:to="{ name: 'login' }" v-if="!$store.state.token">Login</router-link>
           <router-link v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''"
             @click="closeMenu">Logout</router-link><br />

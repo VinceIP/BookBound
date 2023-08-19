@@ -7,6 +7,9 @@
   --background-image: url("../images/bg.jpg");
   --background-color-popout: rgba(254, 209, 113, 0.192);
   --background-color-green: rgb(157, 172, 143);
+  --background-color-green-light: rgb(225, 247, 207);
+  --background-color-green-dark: rgba(67, 73, 60, 0.781);
+  --background-color-orange:rgba(248, 182, 107, 0.479);
   --background-color-green-mute: rgba(115, 147, 126, 0.753);
 
   --main-font: "Montserrat", sans-serif;
@@ -19,6 +22,7 @@
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
+  font-family: var(--main-font);
 }
 
 body {

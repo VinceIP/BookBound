@@ -213,7 +213,7 @@ input {
   }
 
   label {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 </style>
