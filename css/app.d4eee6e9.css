@@ -121,23 +121,23 @@
 }
 
 
-#header_panel[data-v-245589f9] {
+#header_panel[data-v-90c26390] {
   width: 35%;
 }
-#header_panel h1[data-v-245589f9] {
+#header_panel h1[data-v-90c26390] {
   font-family: var(--header-font);
   font-size: 32px;
   text-align: center;
   color: var(--font-color);
 }
-.product_details_container[data-v-245589f9] {
+.product_details_container[data-v-90c26390] {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 30px;
-  width:85%;
+  width: 85%;
 }
-.product_details[data-v-245589f9] {
-  width:100%;
+.product_details[data-v-90c26390] {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -147,22 +147,22 @@
   padding: 20px;
   box-shadow: var(--panel-shadow);
 }
-.rounded_panel[data-v-245589f9] {
+.rounded_panel[data-v-90c26390] {
   width: 90%;
 }
-.rounded_panel h1[data-v-245589f9] {
+.rounded_panel h1[data-v-90c26390] {
   font-family: var(--main-font);
   font-size: 16px;
   padding: 10px;
 }
-.book_covers[data-v-245589f9] {
+.book_covers[data-v-90c26390] {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 1vw;
   width: 90%;
 }
-.book_covers .book_cover[data-v-245589f9] {
+.book_covers .book_cover[data-v-90c26390] {
   filter: drop-shadow(15px 15px 8px rgba(0, 0, 0, 0.329));
   max-width: 100%;
   height: auto;
@@ -170,24 +170,24 @@
 
 /*-- Mobile -- */
 @media (max-width: 500px) {
-.page_header[data-v-245589f9] {
+.page_header[data-v-90c26390] {
 }
-.page_header h1[data-v-245589f9] {
+.page_header h1[data-v-90c26390] {
     padding: 3px;
 }
-.page_header img[data-v-245589f9] {
+.page_header img[data-v-90c26390] {
     position: absolute;
     top: 90px;
-    left: -40px;
+    left: 20px;
     width: 325px;
     height: auto;
     filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
 }
-.floating[data-v-245589f9] {
+.floating[data-v-90c26390] {
     margin-left: 0px;
     margin-top: 0px;
 }
-@keyframes floating-245589f9 {
+@keyframes floating-90c26390 {
 0% {
       transform: translate(0%, 30px);
 }
@@ -198,73 +198,101 @@
       transform: translate(0%, 30px);
 }
 }
-.content[data-v-245589f9] {
+.content[data-v-90c26390] {
     position: relative;
     margin-left: 1vw;
     margin-right: auto;
     top: 290px;
     width: 90vw;
 }
-#header_panel[data-v-245589f9] {
+#header_panel[data-v-90c26390] {
     width: 70vw;
 }
-#header_panel h1[data-v-245589f9] {
+#header_panel h1[data-v-90c26390] {
     font-size: 22px;
 }
-.product_details_container[data-v-245589f9] {
+.product_details_container[data-v-90c26390] {
     width: 100%;
     justify-self: flex-start;
     align-self: flex-start;
 }
-.product_details[data-v-245589f9] {
+.product_details[data-v-90c26390] {
     width: 86vw;
     grid-template-columns: 1fr;
     padding: 15px;
 }
-.product_details .rounded_panel[data-v-245589f9]{
+.product_details .rounded_panel[data-v-90c26390] {
     height: -moz-fit-content;
     height: fit-content;
     padding: 9px;
     margin: 5px 0px 15px 0px;
-    width:100%;
+    width: 100%;
 }
-.rounded_panel h1[data-v-245589f9] {
+.rounded_panel h1[data-v-90c26390] {
     font-size: 12px;
     padding: 3px;
 }
-.book_covers[data-v-245589f9] {
+.book_covers[data-v-90c26390] {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
-.book_covers .book_cover[data-v-245589f9] {
+.book_covers .book_cover[data-v-90c26390] {
     width: 80px;
     align-self: center;
     justify-self: center;
 }
 }
 
-/* -- Mobile Large -- */
-@media (max-width:1000px){
-.book_covers[data-v-245589f9] {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 1vw;
-  width: 100%;
+/* -- Mobile Large/landscape -- */
+@media (max-width: 1000px) {
+.page_header h1[data-v-90c26390] {
+    padding: 3px;
+    font-size: 42px;
+}
+.page_header img[data-v-90c26390] {
+    width: 325px;
+}
+.rounded_panel h1[data-v-90c26390] {
+    font-size: 14px;
+    padding: 8px;
+}
+.book_covers[data-v-90c26390] {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1vw;
+    max-width: 70%;
+}
+.book_covers .book_cover[data-v-90c26390] {
+    filter: drop-shadow(15px 15px 8px rgba(0, 0, 0, 0.329));
+    max-width: 100%;
+    height: auto;
+}
+.product_details:nth-child(odd) .rounded_panel[data-v-90c26390] {
+    order: 1;
+}
+.product_details:nth-child(odd) .book_covers[data-v-90c26390] {
+    order: 2;
+}
+.product_details:nth-child(even) .rounded_panel[data-v-90c26390] {
+    order: 2;
+}
+.product_details:nth-child(even) .book_covers[data-v-90c26390] {
+    order: 1;
 }
 }
 
 /*-- Desktop --*/
 @media (min-width: 916px) {
-.product_details:nth-child(odd) .rounded_panel[data-v-245589f9] {
+.product_details:nth-child(odd) .rounded_panel[data-v-90c26390] {
     order: 1;
 }
-.product_details:nth-child(odd) .book_covers[data-v-245589f9] {
+.product_details:nth-child(odd) .book_covers[data-v-90c26390] {
     order: 2;
 }
-.product_details:nth-child(even) .rounded_panel[data-v-245589f9] {
+.product_details:nth-child(even) .rounded_panel[data-v-90c26390] {
     order: 2;
 }
-.product_details:nth-child(even) .book_covers[data-v-245589f9] {
+.product_details:nth-child(even) .book_covers[data-v-90c26390] {
     order: 1;
 }
 }
