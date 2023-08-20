@@ -133,6 +133,13 @@ button{
   overflow-x: hidden;
 }
 
+.popout-panel{
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color-popout);
+  box-shadow: var(--panel-shadow);
+}
+
 /*-- Desktop -- */
 @media (min-width: 916px) {
 }
