@@ -14,16 +14,6 @@ import AddPrize from '../views/AddPrizePage.vue'
 import AboutUs from '../views/AboutUs.vue'
 
 Vue.use(Router)
-
-/**
- * The Vue Router is used to "direct" the browser to render a specific view component
- * inside of App.vue depending on the URL.
- *
- * It also is used to detect whether or not a route requires the user to have first authenticated.
- * If the user has not yet authenticated (and needs to) they are redirected to /login
- * If they have (or don't need to) they're allowed to go about their way.
- */
-
 const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
@@ -76,27 +66,39 @@ const router = new Router({
     {
       path: "/book",
       name: "reading",
-      component: Reading
+      component: Reading,
+      meta:{
+        requiresAuth: true
+      }
     },
     {
       path: "/user-profile/:username",
       name: "user-profile",
-      component: UserProfile
+      component: UserProfile,
+      meta:{
+        requiresAuth: true
+      }
     },
     {
       path: "/addmember",
       name: "addmember",
-      component: AddMember
+      component: AddMember,
+      meta:{
+        requiresAuth: true
+      }
     },
     {
       path: "/addprize",
       name: "addprize",
-      component: AddPrize
+      component: AddPrize,
+      meta:{
+        requiresAuth: true
+      }
     },
     {
       path: "/aboutus",
       name: "aboutus",
-      component: AboutUs
+      component: AboutUs,
     }
   ]
 })

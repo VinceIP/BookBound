@@ -36,7 +36,7 @@ button{
 
 .content {
   position: absolute;
-  top:30%;
+  top:25%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +44,8 @@ button{
 }
 
 .page_header {
+  position: absolute;
+  top:0;
   display: flex;
   flex-direction: row;
   font-family: var(--header-font);
@@ -51,10 +53,8 @@ button{
   color: var(--font-color);
   align-items: center;
   justify-content: center;
-  height: 250px;
+  height: 25%;
   width: 100vw;
-  position: absolute;
-  top:0;
   box-shadow: var(--panel-shadow);
 }
 
@@ -79,7 +79,8 @@ button{
   animation-duration: 3.5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  z-index: 2;
+  z-index: 1;
+  pointer-events: none;
 }
 
 @keyframes floating {
@@ -139,7 +140,7 @@ button{
 /*-- Mobile --*/
 @media (max-width: 500px) {
   .content {
-    top:60%;
+    top:50vh;
     margin-left: 1%;
     margin-right: 1%;
   }
@@ -155,8 +156,8 @@ button{
   .page_header img {
     position: absolute;
     margin-top:150px;
-    top:10%;
     left:10%;
+    top:-6vh;
     width:300px;
     height: auto;
     filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
@@ -183,7 +184,7 @@ button{
 /* -- Mobile Large/landscape -- */
 @media (min-width: 501px) and (max-width: 1000px) {
   .content {
-    top:85%;
+    top:85vh;
     margin-left: 1%;
     margin-right: 1%;
   }

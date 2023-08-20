@@ -9,8 +9,9 @@
     </div>
 
     <div class="content">
-      <div class="credentials-panel">
-        <div class="credentials-book">
+      <div class="popout-spanner">
+        <div class="credentials-panel">
+          <div class="credentials-book">
             <div class="form-input-group" id="username">
               <label for="username">👤 Username</label>
               <input
@@ -32,19 +33,22 @@
             </div>
             <div class="button-container">
               <button class="signin-button" v-on:click="login">Sign in</button>
-              <button class="signin-button" v-on:click="register">Register</button>
+              <button class="signin-button" v-on:click="register">
+                Register
+              </button>
             </div>
 
-          <div class="status-container">
-            <div class="alert" role="alert" v-if="invalidCredentials">
-              Invalid username or password.
-            </div>
-            <div
-              class="alert"
-              role="alert"
-              v-if="this.$route.query.registration"
-            >
-              Thank you for registering, please sign in.
+            <div class="status-container">
+              <div class="alert" role="alert" v-if="invalidCredentials">
+                Invalid username or password.
+              </div>
+              <div
+                class="alert"
+                role="alert"
+                v-if="this.$route.query.registration"
+              >
+                Thank you for registering, please sign in.
+              </div>
             </div>
           </div>
         </div>
@@ -95,15 +99,15 @@ export default {
 </script>
 
 <style scoped>
-.content {
-  margin-top: 25px;
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 .credentials-panel {
   display: flex;
-  background-color: var(--background-color-popout);
-  box-shadow: var(--panel-shadow);
-  width: 50%;
+  width: 100%;
   justify-content: center;
 }
 
@@ -118,13 +122,13 @@ export default {
   background-position: center;
   width: 100%;
   height: 400px;
+  filter: drop-shadow(20px 30px 16px rgba(0, 0, 0, 0.329));
 }
 .form-input-group {
   font-family: "Montserrat", sans-serif;
   color: rgb(88, 85, 99);
-  margin-right: 20px;
+  
 }
-
 .button-container {
   display: flex;
   flex-wrap: wrap;
@@ -132,10 +136,6 @@ export default {
   align-items: center;
 }
 
-.running-board {
-  margin-top: 150px;
-  background: rgb(115, 147, 126);
-}
 .alert {
   text-decoration: none;
   color: black;
@@ -163,56 +163,43 @@ export default {
 /* -- Mobile Large/landscape -- */
 @media (min-width: 501px) and (max-width: 1000px) {
 
-  .page_header {
-  height: 200px;
-}
+  .content{
+    top:95%;
+  }
   .credentials-panel {
-  width: 75%;
-  height: 350px;
-  justify-content: center;
-  align-items: center;
-}
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+  }
 
-.credentials-book {
-  justify-content: center;
-  align-items: center;
-  background-position: center;
-  background-size: 60%;
-  height: 300px;
-}
+  .credentials-book {
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: 65%;
+    height: 300px;
+  }
 }
 
 /* -- Mobile -- */
-@media(max-width:500px){
-  .page_header {
-  height: 200px;
-}
-
-.page_header h1 {
-  font-size: 36px;
-  width: 100%;
-  margin-left: 0%;
-}
-.page_header img {
-    top: 120px;
+@media (max-width: 500px) {
+  .page_header{
   }
 
-
   .credentials-panel {
-  width: 100%;
-  height: 350px;
-  justify-content: center;
-  align-items: center;
-  margin-left: 20px;
-}
+    width: 100%;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+  }
 
-.credentials-book {
-  justify-content: center;
-  align-items: center;
-  background-position: center;
-  background-size: 100%;
-  height: 300px;
+  .credentials-book {
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: 100%;
+    height: 300px;
+  }
 }
-}
-
 </style>

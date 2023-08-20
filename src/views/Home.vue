@@ -274,9 +274,13 @@ export default {
 @media (min-width: 501px) and (max-width: 1000px) {
 
   .product_details {
-  width: 98%;
+  width: 95%;
   padding: 0px;
 }
+.rounded_panel h1 {
+    font-size: 14px;
+    padding: 5px;
+  }
   .book_covers {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;

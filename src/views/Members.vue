@@ -224,11 +224,6 @@ a {
     width: 40%;
     height: 50px;
   }
-    .family-panel-label:nth-child(1) { order: 1; }
-  .family-panel-label:nth-child(2) { order: 3; }
-  .family-panel-label:nth-child(3) { order: 5; }
-  .family-data-panel:nth-child(1) { order: 2; }
-  .family-data-panel:nth-child(2) { order: 4; }
-  .family-data-panel:nth-child(3) { order: 6; }
+  
 }
 </style>

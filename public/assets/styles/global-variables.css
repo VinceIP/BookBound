@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+@import url("https://fonts.cdnfonts.com/css/socake");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+:root {
+  --background-color: rgba(254, 232, 184);
+  --background-image: url("../images/bg.jpg");
+  --background-color-popout: rgba(254, 209, 113, 0.192);
+  --background-color-green: rgb(157, 172, 143);
+  --background-color-green-light: rgb(225, 247, 207);
+  --background-color-green-dark: rgba(67, 73, 60, 0.781);
+  --background-color-orange:rgba(248, 182, 107, 0.479);
+  --background-color-green-mute: rgba(115, 147, 126, 0.753);
+
+  --main-font: "Montserrat", sans-serif;
+  --header-font: "Socake", sans-serif;
+  --font-color: rgb(48, 46, 49);
+  --font-size: ;
+
+  --panel-shadow: 0 4px 24px rgba(0, 0, 0, 0.658);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--main-font);
+}
+
+html, body {
+  overflow-x:hidden;
+}
+
+button{
+  font-family: var(--main-font);
+  font-weight: bold;
+}
+
+.content {
+  position: absolute;
+  top:25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_header {
+  position: absolute;
+  top:0;
+  display: flex;
+  flex-direction: row;
+  font-family: var(--header-font);
+  background-color: var(--background-color-green-mute);
+  color: var(--font-color);
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+  width: 100vw;
+  box-shadow: var(--panel-shadow);
+}
+
+.page_header h1 {
+  font-size: 56px;
+  text-shadow: 15px 15px 10px rgba(0, 0, 0, 0.329);
+  text-align: center;
+  width: 100%;
+}
+
+.page_header img {
+  z-index: 1;
+  width: 375px;
+  height: auto;
+  position: absolute;
+  left:80%;
+  filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0px, 50px);
+  }
+  50% {
+    transform: translate(0px, 65px);
+  }
+  100% {
+    transform: translate(-0px, 50px);
+  }
+}
+
+.rounded_panel {
+  height: fit-content;
+  background: rgb(115, 147, 126);
+  border: 1px;
+  border-color: rgb(55, 77, 62);
+  border-style: solid;
+  border-radius: 40px;
+  padding: 1vh;
+  margin: 50px;
+  width: fit-content;
+  box-shadow: var(--panel-shadow);
+  justify-content: center;
+  align-items: center;
+}
+.rounded_panel h1 {
+  font-family: var(--main-font);
+  font-size: 19px;
+  padding: 10px;
+}
+
+.rounded_panel p {
+  font-family: var(--main-font);
+  font-size: 16px;
+  padding: 10px;
+}
+
+.popout-spanner{
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color-popout);
+  box-shadow: var(--panel-shadow);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-x: hidden;
+}
+
+/*-- Desktop -- */
+@media (min-width: 916px) {
+}
+
+/*-- Mobile --*/
+@media (max-width: 500px) {
+  .content {
+    top:50vh;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  .page_header {
+    flex-direction: column;
+  }
+
+  .page_header h1 {
+    padding: 3px;
+    font-size: 40px;
+  }
+  .page_header img {
+    position: absolute;
+    margin-top:150px;
+    left:10%;
+    top:-6vh;
+    width:300px;
+    height: auto;
+    filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
+  }
+
+  .floating {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translate(0%, 30px);
+    }
+    50% {
+      transform: translate(0%, 45px);
+    }
+    100% {
+      transform: translate(0%, 30px);
+    }
+  }
+}
+
+/* -- Mobile Large/landscape -- */
+@media (min-width: 501px) and (max-width: 1000px) {
+  .content {
+    top:85vh;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  .page_header {
+    flex-direction: column;
+    height: 165px;
+  }
+
+  .page_header h1 {
+    padding: 3px;
+    font-size: 40px;
+  }
+  .page_header img {
+    position: absolute;
+    top:10%;
+    left:33%;
+    width:300px;
+    height: auto;
+    filter: drop-shadow(25px 35px 8px rgba(0, 0, 0, 0.329));
+  }
+
+  .floating {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
