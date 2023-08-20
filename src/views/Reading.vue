@@ -1,15 +1,16 @@
 <template>
-<div>
-    <header>
-      <div class="logo_header">
-        <h3 id="member-heading">Book Search</h3>
-        <router-link to="/">
-        <img src="../assets/images/sharpened-transparent-logo.png" />
-        </router-link>
-      </div>
-      </header>
+<div class="book-search">
+  <div class="page_header">
+      <h1>Find A Book</h1>
+      <img
+        class="floating"
+        src="../assets/images/sharpened-transparent-logo.png"
+      />
+    </div>
+    <div class="content">
     <add-book/>
-  </div>
+    </div>
+    </div>
 </template>
 
 <script>
@@ -25,9 +26,12 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap%27");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
-
+.book-search{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .results {
   background: rgb(254, 209, 113);

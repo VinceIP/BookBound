@@ -1,44 +1,66 @@
 <template>
-  <div class="add-book">
-    <form v-on:submit.prevent="getBook">
-      <h1>Add Book</h1>
-      <div>
-        <label for="title">Title</label>
-        <input
-          type="radio"
-          name="titleOrIsbn"
-          id="title-button"
-          v-model="selectedOption"
-          value="title"
-          checked
-        />
-        <label for="isbn">ISBN</label>
-        <input
-          type="radio"
-          name="titleOrIsbn"
-          id="isbn-button"
-          v-model="selectedOption"
-          value="isbn"
-        />
+  <div>
+    <div class="popout-spanner">
+      <div class="add-book">
+        <div class="popout-panel">
+          <div class="search-box">
+            <form v-on:submit.prevent="getBook">
+              <h3>Search:</h3>
+              <div>
+                <label for="title">Title</label>
+                <input
+                  type="radio"
+                  name="titleOrIsbn"
+                  id="title-button"
+                  v-model="selectedOption"
+                  value="title"
+                  checked
+                />
+                <label for="isbn">ISBN</label>
+                <input
+                  type="radio"
+                  name="titleOrIsbn"
+                  id="isbn-button"
+                  v-model="selectedOption"
+                  value="isbn"
+                />
+              </div>
+              <div v-if="selectedOption === 'title'">
+                <label for="title-input">Title:</label>
+                <input
+                  type="text"
+                  id="title-input"
+                  v-model="bookToSearch.searchTerm"
+                />
+              </div>
+              <div v-if="selectedOption === 'isbn'">
+                <label for="isbn-input">ISBN:</label>
+                <input
+                  type="text"
+                  id="isbn-input"
+                  v-model="bookToSearch.searchTerm"
+                />
+              </div>
+              <button class="selections" type="submit" v-on:click="makeVisible">
+                Find Book
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
-      <div v-if="selectedOption === 'title'">
-        <label for="title-input">Title</label>
-        <input type="text" id="title-input" v-model="bookToSearch.searchTerm" />
+    </div>
+    <div class="popout-spanner">
+      <div class="" v-show="showResults">
+        <div class="results-grid popout-panel results-panel">
+          <book-detail
+            v-for="book in this.$store.state.bookResults"
+            v-bind:showButton="true"
+            v-bind:key="book.isbn"
+            v-bind:book="book"
+            class="book-card"
+          />
+        </div>
       </div>
-      <div v-if="selectedOption === 'isbn'">
-        <label for="isbn-input">ISBN</label>
-        <input type="text" id="isbn-input" v-model="bookToSearch.searchTerm" />
-      </div>
-      <button class="selections" type="submit" v-on:click="makeVisible">Find Book</button>
-    </form>
-    <div v-show="showResults" class="results-grid">
-      <book-detail
-        v-for="book in this.$store.state.bookResults"
-        v-bind:showButton="true"
-        v-bind:key="book.isbn"
-        v-bind:book="book"
-        class="book-card"
-      />
     </div>
   </div>
 </template>
@@ -105,25 +127,40 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
-
 .add-book {
-  padding: 15px;
-  text-align: center;
-  background: rgba(254, 209, 113, 0.5);
-  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.popout-panel {
+  width: 100%;
+  margin: 50px;
+}
+
+.results-spanner {
+  flex-direction: column;
+}
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .results-grid {
   margin-left: 12%;
   margin-right: 12%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  background-color: rgb(254 209 113 / 56%);
-  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  flex-wrap: wrap;
   padding: 30px;
 }
-
 
 button {
   font-family: sans-serif;
@@ -135,8 +172,8 @@ input {
 
 .selections {
   transition-duration: 0.4s;
-  width:200px;
-  height:60px;
+  width: 200px;
+  height: 60px;
   padding: 12px 28px;
   border: 1px solid rgb(0, 0, 0);
   margin: 50px 30px 40px 30px;
@@ -144,7 +181,7 @@ input {
   font-family: "Montserrat", sans-serif;
   color: rgb(48, 46, 49);
   font-weight: bold;
-  font-size:15px ;
+  font-size: 15px;
 }
 
 .selections:hover {

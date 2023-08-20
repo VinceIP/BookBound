@@ -9,51 +9,57 @@
     </div>
 
     <div class="content">
-      <div class="family-panel" v-if="!isLoading">
-        <div class="family-panel-labels">
-          <div class="family-panel-label">
-            <h1>Stats</h1>
+      <div class="popout-spanner">
+        <div class="family-panel" v-if="!isLoading">
+          <div class="family-panel-labels">
+            <div class="family-panel-label">
+              <h1>Stats</h1>
+            </div>
+            <div class="family-panel-label">
+              <h1>My Family</h1>
+            </div>
+            <div class="family-panel-label">
+              <h1>Leaderboard</h1>
+            </div>
           </div>
-          <div class="family-panel-label">
-            <h1>Family</h1>
+          <div class="family-data-panel">
+            <family-reading-totals />
           </div>
-          <div class="family-panel-label">
-            <h1>Leaderboard</h1>
+          <div class="family-data-panel">
+            <div class="family-members-panel">
+              <button
+                class="family-member-button"
+                v-for="member in memberResults"
+                v-bind:key="member.id"
+              >
+                <router-link
+                  v-bind:to="{
+                    name: 'user-profile',
+                    params: { username: member.username },
+                  }"
+                  >{{ member.username }}</router-link
+                >
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="family-data-panel">
-          <family-reading-totals />
-        </div>
-        <div class="family-data-panel family-members-panel">
-          <div
-            class="family-member"
-            v-for="member in memberResults"
-            v-bind:key="member.id"
-          >
-            <router-link
-              v-bind:to="{
-                name: 'user-profile',
-                params: { username: member.username },
-              }"
-              >{{ member.username }}</router-link
-            >
+          <div class="family-data-panel">
+            <the-leaderboard />
           </div>
-        </div>
-        <div class="family-data-panel">
-          <the-leaderboard />
-        </div>
-        <div id="nav">
-          <button>
-            <router-link v-bind:to="{ name: 'reading' }"> Reading</router-link>
-          </button>
-          <button>
-            <router-link v-bind:to="{ name: 'prize' }"> Prizes </router-link>
-          </button>
-          <button v-show="isParent">
-            <router-link v-bind:to="{ name: 'addmember' }"
-              >Add User</router-link
-            >
-          </button>
+          <div id="nav">
+            <button>
+              <router-link v-bind:to="{ name: 'reading' }">
+                Book Search</router-link
+              >
+            </button>
+            <button>
+              <router-link v-bind:to="{ name: 'prize' }"> Prizes </router-link>
+            </button>
+            <button v-show="isParent">
+              <router-link v-bind:to="{ name: 'addmember' }"
+                >Add User</router-link
+              >
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -91,15 +97,27 @@ export default {
 </script>
 
 <style>
+.content {
+  top: 30%;
+}
+.members {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popout-spanner {
+  height: fit-content;
+  margin-bottom: 25px;
+}
 .family-panel {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   column-gap: 15px;
   row-gap: 15px;
-  background-color: var(--background-color-popout);
-  box-shadow: var(--panel-shadow);
-  width: 90%;
+  width: 100%;
   padding: 25px;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -129,6 +147,8 @@ export default {
   box-shadow: var(--panel-shadow);
   margin: 0px 25px 0px 25px;
   height: 400px;
+  justify-content: center;
+  align-items: center
 }
 
 .family-members-panel {
@@ -176,8 +196,22 @@ button {
   height: 40px;
 }
 
+.family-member-button{
+  transition-duration: 0.25s;
+  border: 1.5px solid var(--background-color-green-dark);
+  margin: 50px 30px 40px 30px;
+  background-color: rgba(223, 78, 78, 0.2);
+  font-family: "Montserrat", sans-serif;
+  color: rgb(88, 85, 99);
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+}
+
 button:hover {
-  background-color: var(--background-color-green-light);
+  background-color: rgba(255, 94, 94, 0.521);
 }
 
 a {
@@ -204,7 +238,7 @@ a {
   }
 
   .family-panel-label {
-    order:1;
+    order: 1;
     width: 100%;
     margin: 0px;
   }
@@ -217,13 +251,12 @@ a {
     height: fit-content;
     width: 330px;
     padding: 10px;
-    order:2;
+    order: 2;
   }
   .family-member {
     margin: 15px;
     width: 40%;
     height: 50px;
   }
-  
 }
 </style>

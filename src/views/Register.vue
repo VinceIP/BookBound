@@ -8,76 +8,78 @@
       />
     </div>
     <div class="content">
-      <div class="registration-panel">
-        <div role="alert" v-if="registrationErrors">
-          {{ registrationErrorMsg }}
+      <div class="popout-spanner">
+        <div class="registration-panel">
+          <div role="alert" v-if="registrationErrors">
+            {{ registrationErrorMsg }}
+          </div>
+
+          <form @submit.prevent="register">
+            <div>
+              <label for="firstName">First Name: </label>
+              <input
+                type="text"
+                id="firstName"
+                v-model="user.firstName"
+                required
+                autofocus
+              />
+            </div>
+
+            <div>
+              <label for="lastName">Last Name: </label>
+              <input
+                type="text"
+                id="lastName"
+                v-model="user.lastName"
+                required
+                autofocus
+              />
+            </div>
+            <div>
+              <label for="email">Email: </label>
+              <input
+                type="email"
+                id="email"
+                v-model="user.email"
+                required
+                autofocus
+              />
+            </div>
+            <div>
+              <label for="username">Username: </label>
+              <input
+                type="text"
+                id="username"
+                v-model="user.username"
+                required
+                autofocus
+              />
+            </div>
+            <div>
+              <label for="password">Password: </label>
+              <input
+                type="password"
+                id="password"
+                v-model="user.password"
+                required
+              />
+            </div>
+            <div>
+              <label for="confirmPassword">Confirm Password: </label>
+              <input
+                type="password"
+                id="confirmPassword"
+                v-model="user.confirmPassword"
+                required
+              />
+            </div>
+            <button class="submit" type="submit">Create Account</button>
+            <router-link class="toLogin" :to="{ name: 'login' }"
+              >Already have an account? Log in.</router-link
+            >
+          </form>
         </div>
-
-        <form @submit.prevent="register">
-          <div>
-            <label for="firstName">First Name: </label>
-            <input
-              type="text"
-              id="firstName"
-              v-model="user.firstName"
-              required
-              autofocus
-            />
-          </div>
-
-          <div>
-            <label for="lastName">Last Name: </label>
-            <input
-              type="text"
-              id="lastName"
-              v-model="user.lastName"
-              required
-              autofocus
-            />
-          </div>
-          <div>
-            <label for="email">Email: </label>
-            <input
-              type="email"
-              id="email"
-              v-model="user.email"
-              required
-              autofocus
-            />
-          </div>
-          <div>
-            <label for="username">Username: </label>
-            <input
-              type="text"
-              id="username"
-              v-model="user.username"
-              required
-              autofocus
-            />
-          </div>
-          <div>
-            <label for="password">Password: </label>
-            <input
-              type="password"
-              id="password"
-              v-model="user.password"
-              required
-            />
-          </div>
-          <div>
-            <label for="confirmPassword">Confirm Password: </label>
-            <input
-              type="password"
-              id="confirmPassword"
-              v-model="user.confirmPassword"
-              required
-            />
-          </div>
-          <button class="submit" type="submit">Create Account</button>
-          <router-link class="toLogin" :to="{ name: 'login' }"
-            >Already have an account? Log in.</router-link
-          >
-        </form>
       </div>
     </div>
   </div>
@@ -141,11 +143,14 @@ export default {
 </script>
 
 <style scoped>
-.content {
+.content{
+  top:30%;
+}
+.register {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 100%;
 }
 .registration-panel {
   display: flex;
@@ -156,7 +161,7 @@ export default {
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 15px;
-  width: 50%;
+  width: 30%;
 }
 
 form {
@@ -189,14 +194,15 @@ input {
 
 .submit {
   transition-duration: 0.2s;
-  padding: 12px 28px;
   border: 2.5px solid rgb(182, 90, 10);
   background-color: rgba(255, 200, 154, 0.8);
   font-size: 15px;
+  padding:5px;
+  width:50%;
 }
 
 .submit:hover {
-  background-color: rgb(182, 90, 10);
+  background-color: rgba(255, 235, 219, 0.8);
 }
 
 /*-- Mobile --*/

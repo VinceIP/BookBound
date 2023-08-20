@@ -20,6 +20,7 @@
                 v-model="user.username"
                 required
                 autofocus
+                autocomplete="username"
               />
             </div>
             <div class="form-input-group" id="password">
@@ -99,6 +100,9 @@ export default {
 </script>
 
 <style scoped>
+.content{
+  top:35%;
+}
 .login {
   display: flex;
   flex-direction: column;
