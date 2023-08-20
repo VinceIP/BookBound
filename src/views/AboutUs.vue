@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="about-us">
     <div class="page_header">
       <h1>The BookBound Team</h1>
       <img
@@ -92,6 +92,12 @@ export default {
 </script>
 
 <style scoped>
+.about-us{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .profile_container {
   display: flex;
   margin-top: 50px;
